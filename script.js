@@ -18,7 +18,10 @@ L.tileLayer(tileLink, {
   maxZoom: 18
 }).addTo(map);
 
-var div = L.DomUtil.create('div', 'issInfo');
-console.log('Create div');
-console.log(div);
-div.innerHTML = '<div class="about">ISS Location Info</div>';
+// var div = L.DomUtil.create('div', 'issInfo', #issInfoContainer);
+// console.log('Create div');
+// console.log(div);
+// div.innerHTML = '<div class="about">ISS Location Info</div>';
+
+var el = document.getElementById('issInfoContainer');
+el.innerHTML += 'ISS Location Info';
