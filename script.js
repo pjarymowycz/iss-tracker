@@ -8,7 +8,8 @@ var tileLink = 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/
 
 // Links to astronaut and ISS location information
 var astrosLink = 'http://api.open-notify.org/astros.json';
-var issNowLink = 'http://api.open-notify.org/iss-now.json';
+// var issNowLink = 'http://api.open-notify.org/iss-now.json';
+var issNowLink = 'https://api.wheretheiss.at/v1/satellites/25544';
 
 // Global variables
 var astrosHTML;
@@ -40,8 +41,8 @@ L.tileLayer(tileLink, {
 // console.log(div);
 // div.innerHTML = '<div class="about">ISS Location Info</div>';
 
-// Fetch astronaut data
-fetch(astrosLink)
+// Fetch ISS location data
+fetch(issNowLink)
   .then(function (response) {
     // Read data as JSON
     return response.json();
@@ -51,11 +52,14 @@ fetch(astrosLink)
     // console.log(data);
 
     // Set global data variables
-    astrosHTML = '<p>' + data['number'] + '</p>';
-    console.log(astrosHTML);
+    issNowX = data['longitude'];
+    issNowY = data['latitude'];
+    issNowHTML = '<p>Latitude: ' + issNowY + '</p>';
+    issNowHTML += '<p>Longitude: ' + issNowX + '</p>';
+    console.log(issNowHTML);
   });
 
 
 var el = document.getElementById('issInfoContainer');
 el.innerHTML += 'ISS Location Info';
-el.innerHTML += astrosHTML;
+el.innerHTML += issNowHTML;
