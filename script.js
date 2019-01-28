@@ -16,6 +16,7 @@ var astrosHTML;
 var issNowX;
 var issNowY;
 var issNowHTML;
+var el;
 
 // Initial Leaflet map options
 var mapOptions = {
@@ -57,9 +58,13 @@ fetch(issNowLink)
     issNowHTML = 'Latitude: ' + issNowY + '</br>';
     issNowHTML += 'Longitude: ' + issNowX + '</br>';
     console.log(issNowHTML);
+
+    el = document.getElementById('issInfoContainer');
+    el.innerHTML += 'ISS Location Info </br>';
+    el.innerHTML += issNowHTML;
   });
 
 
-var el = document.getElementById('issInfoContainer');
-el.innerHTML += 'ISS Location Info </br>';
-el.innerHTML += issNowHTML;
+// var el = document.getElementById('issInfoContainer');
+// el.innerHTML += 'ISS Location Info </br>';
+// el.innerHTML += issNowHTML;
