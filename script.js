@@ -19,4 +19,6 @@ L.tileLayer(tileLink, {
 }).addTo(map);
 
 var div = L.DomUtil.create('div', 'issInfo');
+console.log('Create div');
+console.log(div);
 div.innerHTML = '<div class="about">ISS Location Info</div>';
