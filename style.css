@@ -9,7 +9,8 @@ body {
   width: 100%;
 }
 
-.issInfo {
+/* .issInfo { */
+#issInfoContainer {
   position: fixed;
   width: 20vw;
   top: 10px;
