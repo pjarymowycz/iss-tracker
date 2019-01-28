@@ -54,12 +54,12 @@ fetch(issNowLink)
     // Set global data variables
     issNowX = data['longitude'];
     issNowY = data['latitude'];
-    issNowHTML = '<p>Latitude: ' + issNowY + '</p>';
-    issNowHTML += '<p>Longitude: ' + issNowX + '</p>';
+    issNowHTML = 'Latitude: ' + issNowY + '</br>';
+    issNowHTML += 'Longitude: ' + issNowX + '</br>';
     console.log(issNowHTML);
   });
 
 
 var el = document.getElementById('issInfoContainer');
-el.innerHTML += 'ISS Location Info';
+el.innerHTML += 'ISS Location Info </br>';
 el.innerHTML += issNowHTML;
