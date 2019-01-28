@@ -17,3 +17,6 @@ var map = L.map('map', mapOptions).setView([38.500893,-98.745117], 5);
 L.tileLayer(tileLink, {
   maxZoom: 18
 }).addTo(map);
+
+var div = L.DomUtil.create('div', 'issInfo');
+div.innerHTML = '<div class="about">ISS Location Info</div>';
