@@ -8,10 +8,14 @@ var tileLink = 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/
 var mapOptions = {
   // dragging: false,
   zoomDelta: 0.25,
-  inertiaDeceleration: 1
+  inertiaDeceleration: 1,
+  zoomControl: false
 };
 
-var map = L.map('map', mapOptions).setView([38.500893,-98.745117], 5);
+var map = L.map('map', mapOptions).setView([38.500893,-98.745117], 2);
+
+// Add Zoom control at top right of page
+L.control.zoom({position: 'topright'}).addTo(map);
 
 // Add base layer
 L.tileLayer(tileLink, {
