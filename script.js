@@ -64,7 +64,7 @@ fetch(issNowLink)
     el.innerHTML += issNowHTML;
 
     // Set marker at ISS Location
-    L.marker([issNowY, issNowX]);
+    L.marker(L.latLng(issNowY, issNowX));
   });
 
 // var el = document.getElementById('issInfoContainer');
