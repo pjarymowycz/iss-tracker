@@ -23,7 +23,8 @@ var mapOptions = {
   // dragging: false,
   zoomDelta: 0.25,
   inertiaDeceleration: 1,
-  zoomControl: false
+  zoomControl: false,
+  worldCopyJump: true
 };
 
 // Initialize Leaflet map
